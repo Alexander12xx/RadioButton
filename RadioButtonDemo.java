@@ -9,7 +9,7 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
     private ButtonGroup group;
     private JLabel imageLabel;
 
-    // File paths for pet images (Ensure these images exist in your project directory)
+    // FIXED: Pathed exactly to your GitHub setup (Capital letters and .webp extension)
     private final String BIRD_PATH = "images/Bird.webp";
     private final String CAT_PATH = "images/Cat.webp";
     private final String DOG_PATH = "images/Dog.webp";
@@ -52,10 +52,10 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
         radioPanel.add(catButton);
         radioPanel.add(dogButton);
         radioPanel.add(rabbitButton);
+        pigButton.setSelected(true); // Default selection
         radioPanel.add(pigButton);
 
-        // Set up the image label (Default selection: Pig)
-        pigButton.setSelected(true);
+        // Set up the image label
         imageLabel = new JLabel(createImageIcon(PIG_PATH));
         imageLabel.setPreferredSize(new Dimension(200, 200));
         
@@ -77,7 +77,6 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
         String selectedPet = "";
         ImageIcon newIcon = null;
 
-        // FIXED: Calling the correct method name "createImageIcon"
         if (e.getSource() == birdButton) {
             selectedPet = "Bird";
             newIcon = createImageIcon(BIRD_PATH);
