@@ -4,7 +4,7 @@ A graphical Java desktop application developed as part of **Java (Assignment 2)*
 
 ---
 
-## 🚀 Features
+##  Features
 
 * **Dynamic UI Selection:** Choose between five different pets (Bird, Cat, Dog, Rabbit, Pig).
 * **Button Grouping:** Built-in validation ensures only one radio button can be selected at a time.
@@ -14,12 +14,12 @@ A graphical Java desktop application developed as part of **Java (Assignment 2)*
 
 ---
 
-## 📸 Application Preview
+##  Application Preview
 
 Below are the screenshots illustrating the required functionality:
 
 ### 1. Main UI Interface
-![Main Application Window](https://raw.githubusercontent.com/Alexander12xx/RadioButton/main/images/Pig.webp)
+![Main Application Window](https://raw.githubusercontent.com/Alexander12xx/RadioButton/main/images/Ui.jpg)
 *The desktop window displays clear radio buttons aligned next to the corresponding pet image.*
 
 ### 2. Message Box Selection Prompt
