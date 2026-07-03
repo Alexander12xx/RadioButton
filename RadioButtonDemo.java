@@ -10,11 +10,11 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
     private JLabel imageLabel;
 
     // File paths for pet images (Ensure these images exist in your project directory)
-    private final String BIRD_PATH = "images/bird.gif";
-    private final String CAT_PATH = "images/cat.gif";
-    private final String DOG_PATH = "images/dog.gif";
-    private final String RABBIT_PATH = "images/rabbit.gif";
-    private final String PIG_PATH = "images/pig.gif";
+    private final String BIRD_PATH = "images/Bird.webp";
+    private final String CAT_PATH = "images/Cat.webp";
+    private final String DOG_PATH = "images/Dog.webp";
+    private final String RABBIT_PATH = "images/Rabbit.webp";
+    private final String PIG_PATH = "images/Pig.webp";
 
     public RadioButtonDemo() {
         // Set up the frame
