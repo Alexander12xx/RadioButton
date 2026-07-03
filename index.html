@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioButtonDemo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Replicating the classic Java Swing window frame styling */
+        .window {
+            background-color: #d4d0c8;
+            border: 2px solid #0055ff;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            width: 450px;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Simulated Title Bar */
+        .title-bar {
+            background: linear-gradient(to right, #0055ff, #00aaff);
+            color: white;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 4px;
+        }
+
+        .btn {
+            width: 16px;
+            height: 16px;
+            background-color: #d4d0c8;
+            border: 1px solid #7f7f7f;
+            font-size: 10px;
+            text-align: center;
+            line-height: 14px;
+            cursor: pointer;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Layout split (WEST and CENTER layouts) */
+        .content {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Radio buttons column (West) */
+        .radio-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 40%;
+            justify-content: flex-start;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        /* Image viewer frame (Center) */
+        .image-panel {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e4e0d8;
+            border: 1px inset white;
+        }
+
+        .image-panel img {
+            max-width: 180px;
+            max-height: 180px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Java Swing Window Mockup -->
+    <div class="window">
+        <div class="title-bar">
+            <span>RadioButtonDemo</span>
+            <div class="window-controls">
+                <div class="btn">_</div>
+                <div class="btn">▢</div>
+                <div class="btn" style="background-color: #e81123; color: white;">X</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- Radio Button Panel -->
+            <div class="radio-panel">
+                <label class="radio-label">
+                    <input type="radio" name="pet" value="Bird" onchange="updatePet('Bird')"> Bird
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="pet" value="Cat" onchange="updatePet('Cat')"> Cat
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="pet" value="Dog" onchange="updatePet('Dog')"> Dog
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="pet" value="Rabbit" onchange="updatePet('Rabbit')"> Rabbit
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="pet" value="Pig" checked onchange="updatePet('Pig')"> Pig
+                </label>
+            </div>
+
+            <!-- Image Panel Container -->
+            <div class="image-panel">
+                <img id="petImage" src="images/Pig.webp" alt="Pig">
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript to control UI updates and popups -->
+    <script>
+        function updatePet(petName) {
+            // Update the image src dynamically matching your repository paths
+            const imgElement = document.getElementById('petImage');
+            imgElement.src = `images/${petName}.webp`;
+            imgElement.alt = petName;
+
+            // Trigger the Java-style alert popup message box
+            setTimeout(() => {
+                alert(`You selected the ${petName}!`);
+            }, 100); // Small timeout to allow the web image to start loading first
+        }
+    </script>
+</body>
+</html>
